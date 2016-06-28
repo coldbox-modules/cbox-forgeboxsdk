@@ -1,0 +1,9 @@
+.settings
+logs/*.log
+settings.xml
+.netbeans
+# testing
+tests/results/*
+coldbox/*
+testbox/*
+logs/*
