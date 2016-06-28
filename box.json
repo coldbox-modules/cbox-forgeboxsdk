@@ -18,7 +18,9 @@
     ],
     "ignore":[
         "tests/*",
-        "server.json"
+        "server.json",
+        ".travis.yml",
+        ".git*"
     ],
     "devDependencies":{
         "testbox":"^2.3.0+00044"
