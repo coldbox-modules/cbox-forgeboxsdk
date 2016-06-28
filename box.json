@@ -2,7 +2,7 @@
     "name":"ForgeBox SDK",
     "author":"Ortus Solutions <info@ortussolutions.com>",
     "version":"1.0.0",
-    "location":"https://github.com/coldbox-modules/cbox-forgeboxsdk",
+    "location":"https://github.com/coldbox-modules/cbox-forgeboxsdk/archive/v1.0.0.zip",
     "slug":"forgeboxsdk",
     "type":"modules",
     "repository":{
