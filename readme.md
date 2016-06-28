@@ -4,18 +4,18 @@
 
 This modules allows you to connect to the ForgeBox.io API and get some package/version information goodness.
 
-## LICENSE
+### LICENSE
 Apache License, Version 2.0.
 
-## IMPORTANT LINKS
+### IMPORTANT LINKS
 - https://github.com/ColdBox/cbox-forgeboxsdk
 
-## SYSTEM REQUIREMENTS
+### SYSTEM REQUIREMENTS
 - Lucee 4.5+
 - Adobe ColdFusion 10+
 - ColdBox 4+
 
-# INSTRUCTIONS
+## INSTRUCTIONS
 
 Just drop into your modules folder or use [CommandBox](http://www.ortussolutions.com/products/commandbox) to install
 
@@ -23,7 +23,7 @@ Just drop into your modules folder or use [CommandBox](http://www.ortussolutions
 
 This will install the sdk in a folder called `forgeboxsdk` or if you are in a ColdBox application it will install it as a module called `forgeboxsdk`.
 
-# Usage
+## Usage
 
 The main SDK client is the `models.ForgeBox.cfc`.  If you are in a ColdBox application you can retrieve it via the DSL: `ForgeBox@forgeboxsdk`.  If you are in a non-ColdBox application just create an instance of `forgeboxsdk.models.ForgeBox`.
 
