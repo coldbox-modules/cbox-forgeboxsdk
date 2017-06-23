@@ -17,9 +17,10 @@ component accessors="true"{
 
 	// Static Order Entries
 	this.ORDER = {
-		POPULAR = "popular",
-		NEW 	= "new",
-		RECENT 	= "recent"
+		POPULAR 	= "popular",
+		NEW 		= "new",
+		RECENT 		= "recent",
+		INSTALLS 	= "installs"
 	};
 
 	/**
@@ -106,18 +107,20 @@ component accessors="true"{
 	){
 		var results = "";
 		var params = {
-			orderBY = arguments.orderby,
-			maxrows = arguments.maxrows,
-			startrow = arguments.startrow,
-			typeSlug = arguments.typeSlug	
+			orderBY		= arguments.orderby,
+			maxrows		= arguments.maxrows,
+			startrow	= arguments.startrow,
+			typeSlug	= arguments.typeSlug	
 		};
 		
 		// Invoke call
 		results = makeRequest( resource="entries", parameters=params );
+		
 		// error 
 		if( results.error ){
 			throw( "Error making ForgeBox REST Call", results.message );
 		}
+		
 		return results.response.data;
 	}
 

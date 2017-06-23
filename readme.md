@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/coldbox-modules/cbox-forgeboxsdk.svg?branch=master)](https://travis-ci.org/coldbox-modules/cbox-forgeboxsdk)
+[![Build Status](https://travis-ci.org/coldbox-modules/cbox-forgeboxsdk.svg?branch=development)](https://travis-ci.org/coldbox-modules/cbox-forgeboxsdk)
 
 # Welcome to the ForgeBox SDK Module
 
