@@ -20,7 +20,7 @@ component extends="testbox.system.BaseSpec"{
 		describe( "ForgeBox SDK", function(){
 			
 			beforeEach(function( currentSpec ){
-				fb = new root.models.ForgeBox();
+				fb = new forgeboxsdk.models.ForgeBox();
 			});
 
 			it( "can build the SDK with defaults", function(){

@@ -1,21 +1,26 @@
-﻿/**
-* Copyright since 2012 by Ortus Solutions, Corp
-* www.ortussolutions.com
-* ---
+/**
+* Copyright Since 2005 Ortus Solutions, Corp
+* www.ortussolutions.com | www.gocontentbox.org
+**************************************************************************************
 */
 component{
+	this.name = "A TestBox Runner Suite " & hash( getCurrentTemplatePath() );
+	// any other application.cfc stuff goes below:
+	this.sessionManagement = true;
+	this.clientManagement  = true;
+	// Turn on/off white space managemetn
+	this.whiteSpaceManagement = "smart";
 
-	// APPLICATION CFC PROPERTIES
-	this.name 				= "Testing Suite" & hash(getCurrentTemplatePath());
-	this.sessionManagement 	= true;
-	this.sessionTimeout 	= createTimeSpan( 0, 0, 15, 0 );
-	this.applicationTimeout = createTimeSpan( 0, 0, 15, 0 );
-	this.setClientCookies 	= true;
-
-	// Create testing mapping
+	// any mappings go here, we create one that points to the root called test.
 	this.mappings[ "/tests" ] = getDirectoryFromPath( getCurrentTemplatePath() );
-	// Map back to its root
 	rootPath = REReplaceNoCase( this.mappings[ "/tests" ], "tests(\\|/)", "" );
-	this.mappings[ "/root" ]   = rootPath;
+	this.mappings[ "/root" ]   			= rootPath;
+	this.mappings[ "/forgeboxsdk" ]  	= rootPath & "/modules/forgeboxsdk";
 
+	// any orm definitions go here.
+
+	// request start
+	public boolean function onRequestStart( String targetPage ){
+		return true;
+	}
 }

@@ -17,9 +17,10 @@ component accessors="true"{
 
 	// Static Order Entries
 	this.ORDER = {
-		POPULAR = "popular",
-		NEW 	= "new",
-		RECENT 	= "recent"
+		POPULAR 	= "popular",
+		NEW 		= "new",
+		RECENT 		= "recent",
+		INSTALLS 	= "installs"
 	};
 
 	/**
