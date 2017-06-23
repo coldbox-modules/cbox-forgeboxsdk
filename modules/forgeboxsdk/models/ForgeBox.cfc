@@ -96,6 +96,7 @@ component accessors="true"{
 	* @maxrows Used for pagination
 	* @startRow Used for pagination
 	* @typeSlug Filter by type
+	* @searchTerm Search by string
 	* 
 	* @results struct = { count:numeric, offset:numeric, results:array, totalRecords:numeric }
 	*/
@@ -103,24 +104,24 @@ component accessors="true"{
 		orderBy = "#this.ORDER.POPULAR#",
 		numeric maxrows = 0,
 		numeric startRow = 1,
-		typeslug=""
+		typeslug="",
+		searchTerm=""
 	){
 		var results = "";
 		var params = {
-			orderBY		= arguments.orderby,
-			maxrows		= arguments.maxrows,
-			startrow	= arguments.startrow,
-			typeSlug	= arguments.typeSlug	
+			orderBy = arguments.orderby,
+			max = arguments.maxrows,
+			offset = arguments.startrow,
+			typeSlug = arguments.typeSlug,
+			searchTerm = arguments.searchTerm
 		};
 		
 		// Invoke call
 		results = makeRequest( resource="entries", parameters=params );
-		
 		// error 
 		if( results.error ){
 			throw( "Error making ForgeBox REST Call", results.message );
 		}
-		
 		return results.response.data;
 	}
 
